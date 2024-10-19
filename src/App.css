@@ -15,6 +15,7 @@ p.bearName {
 p.bearName,
 div.button-wrapper {
   transform: translateY(-1em);
+  background-color: white;
 }
 
 div.nameWrapper {
