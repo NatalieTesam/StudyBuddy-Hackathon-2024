@@ -1,6 +1,6 @@
 import "./SpeechBubble.css";
 
-export default function SpeechBubble(category: string) {
+export default function SpeechBubble({category}: {category: string}) {
 
   const motivation = [
     "Believe in yourself! You can achieve anything with perseverance and hard work.",

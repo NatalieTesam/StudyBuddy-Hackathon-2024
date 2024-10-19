@@ -1,6 +1,6 @@
 // FlashcardComponent.tsx
 import React, { useState } from 'react';
-import './flashcard.css'; // Optional: import styles if you want
+import './Flashcard.css'; // Optional: import styles if you want
 
 interface Flashcard {
     term: string;
