@@ -13,7 +13,7 @@
 .speech-bubble::after {
   content: "";
   position: absolute;
-  bottom: -20px; /* Distance from the bottom of the bubble */
+  bottom: -19px; /* Distance from the bottom of the bubble */
   left: 50%; /* Center the triangle horizontally */
   transform: translateX(-50%);
   border-width: 10px;
@@ -23,7 +23,7 @@
 
 /* Optional: Positioning for demo */
 .bubble-container {
-  margin-top: 50px;
+  margin-top: 1em;
   display: flex;
   justify-content: center;
 }

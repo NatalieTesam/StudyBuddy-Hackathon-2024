@@ -1,5 +1,35 @@
 p.bearName {
-  padding-left: 71px;
-  background: white;
+  /* padding-left: 71px;
+  background: white; */
   margin: 0;
+  font-size: 1.5em;
+
+  border-radius: 10px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border: solid 1px black;
+  padding: 0 0.2em;
+  border-bottom: none;
+}
+
+p.bearName,
+div.button-wrapper {
+  transform: translateY(-1em);
+}
+
+div.nameWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 1em; */
+}
+
+div.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-wrapper button {
+  font-size: 1.5em;
 }
