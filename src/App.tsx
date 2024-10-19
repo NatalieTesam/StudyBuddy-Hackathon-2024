@@ -7,7 +7,6 @@ import DeadBear from "./components/DeadBear";
 import { getRandomName } from "./utils";
 // import { processAssignments } from "./utils";
 import SpeechBubble from "./components/SpeechBubble";
-import CookieComponent from "./components/Cookie";
 // import Features from "./components/Features";
 
 const quote = "motivational";
