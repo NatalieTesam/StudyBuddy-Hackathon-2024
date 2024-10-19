@@ -4,6 +4,7 @@ import HappyBear from "./components/HappyBear";
 import HungryBear from "./components/HungryBear";
 import StarvingBear from "./components/StarvingBear";
 import DeadBear from "./components/DeadBear";
+import { getRandomName } from "./utils";
 // import { processAssignments } from "./utils";
 // import SpeechBubble from "./components/SpeechBubble";
 
@@ -82,9 +83,32 @@ function App() {
     setColor(e.target.value);
     localStorage.setItem("color", e.target.value);
   };
+
+  const [name, setName] = useState(
+    localStorage.getItem("name") || getRandomName()
+  );
+  const [regen, setRegen] = useState(false);
+  useEffect(() => {
+    localStorage.setItem("name", name);
+  });
+
+  useEffect(() => {
+    if (buddyHealth == 0) {
+      setRegen(true);
+    }
+  }, [buddyHealth]);
+
+  useEffect(() => {
+    if (regen && buddyHealth == 3) {
+      setName(getRandomName());
+      setRegen(false);
+    }
+  }, [buddyHealth]);
+
   return (
     <>
       <input type='color' value={color} onChange={handleColorChange} />
+      <p className='bearName'>{name}</p>
       {buddyHealth == 3 && <HappyBear color={color} />}
       {buddyHealth == 2 && <HungryBear color={color} />}
       {buddyHealth == 1 && <StarvingBear color={color} />}
