@@ -1,1 +1,1 @@
-{"root":["./src/App.tsx","./src/main.tsx","./src/utils.ts","./src/vite-env.d.ts","./src/components/HappyBear.tsx"],"version":"5.6.3"}
+{"root":["./src/App.tsx","./src/main.tsx","./src/utils.ts","./src/vite-env.d.ts","./src/components/DeadBear.tsx","./src/components/HappyBear.tsx","./src/components/HungryBear.tsx","./src/components/StarvingBear.tsx"],"version":"5.6.3"}
