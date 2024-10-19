@@ -6,9 +6,8 @@ import StarvingBear from "./components/StarvingBear";
 import DeadBear from "./components/DeadBear";
 import { getRandomName } from "./utils";
 // import { processAssignments } from "./utils";
-// import SpeechBubble from "./components/SpeechBubble";
 import SpeechBubble from "./components/SpeechBubble";
-import Features from "./components/Features";
+// import Features from "./components/Features";
 
 const quote = "motivational";
 
@@ -114,14 +113,11 @@ function App() {
       <input type='color' value={color} onChange={handleColorChange} />
 
       <p className='bearName'>{name}</p>
+      <SpeechBubble category={quote} />
       {buddyHealth == 3 && <HappyBear color={color} />}
       {buddyHealth == 2 && <HungryBear color={color} />}
       {buddyHealth == 1 && <StarvingBear color={color} />}
       {buddyHealth == 0 && <DeadBear color={color} />}
-      {/* <SpeechBubble /> */}
-      <SpeechBubble category={quote} />
-      <HappyBear color={color} />
-      <Features />
     </>
   );
 }
