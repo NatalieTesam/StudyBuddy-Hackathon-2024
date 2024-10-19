@@ -7,7 +7,7 @@ const CookieComponent: React.FC = () => {
     const [clicksLeft, setClicksLeft] = useState(5); // Initial click value
     const [isClickable, setIsClickable] = useState(true);
     const [timer, setTimer] = useState(0); // Timer for recharging clicks
-    const cookieValue = 10; // Points gained from eating the cookie
+    const cookieValue = 1; // Points gained from eating the cookie
 
     // Function to handle eating the cookie
     const eatCookie = () => {
@@ -45,7 +45,7 @@ const CookieComponent: React.FC = () => {
             <h2>Total Points: {points}</h2>
             <h3>Clicks Left: {isClickable ? clicksLeft : "0"}</h3>
             <h3>
-                {isClickable ? "You can click the cookie!" : `Recharge in ${timer} seconds...`}
+                {isClickable ? "You can feed a cookie!" : `Recharge in ${timer} seconds...`}
             </h3>
         </div>
     );
