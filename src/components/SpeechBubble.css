@@ -1,0 +1,30 @@
+.speech-bubble {
+    position: relative;
+    background: #00aaff;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 250px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* Triangle (tail) pointing down */
+  .speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; /* Distance from the bottom of the bubble */
+    left: 50%; /* Center the triangle horizontally */
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #00aaff transparent transparent transparent; /* Triangle pointing down */
+  }
+  
+  /* Optional: Positioning for demo */
+  .bubble-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  
