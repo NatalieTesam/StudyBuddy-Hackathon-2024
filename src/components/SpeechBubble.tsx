@@ -1,9 +1,6 @@
 import "./SpeechBubble.css";
 
-export default function SpeechBubble() {
-  interface SpeechBubbleProps {
-    text: string;
-  }
+export default function SpeechBubble(category: string) {
 
   const motivation = [
     "Believe in yourself! You can achieve anything with perseverance and hard work.",
@@ -50,9 +47,21 @@ export default function SpeechBubble() {
     "It was great seeing you! Goodbye!",
   ];
 
-  type TextType = "motivational" | "greeting" | "farewell" | "informative";
+  const facts = [
+    "Honey Never Spoils: Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.",
+    "Bananas are Berries: In botanical terms, bananas qualify as berries, while strawberries do not.",
+    "Octopuses Have Three Hearts: Two hearts pump blood to the gills, while the third pumps it to the rest of the body.",
+    "Wombat Poop is Cube-Shaped: Wombats produce cube-shaped poop to prevent it from rolling away, marking their territory.",
+    "Sharks Are Older Than Trees: Sharks have existed for around 400 million years, while the earliest trees appeared around 350 million years ago.",
+    "A Day on Venus is Longer than a Year: Venus takes about 243 Earth days to rotate on its axis, but only about 225 Earth days to orbit the Sun.",
+    "Humans Share 60% of Their DNA with Bananas: While this might sound strange, all living organisms share some genetic similarities.",
+    "The Eiffel Tower Can Be 15 cm Taller in the Summer: Due to thermal expansion, the metal structure can expand and contract with temperature changes.",
+    "A Group of Flamingos is Called a 'Flamboyance': This colorful term reflects their vibrant appearance.",
+    "Cows Have Best Friends: Research shows that cows become stressed when separated from their close companions, highlighting their social nature.",
+    "Did you know? TypeScript adds static types to JavaScript, helping to catch errors early."
+  ]
 
-  function generateText(type: TextType): string {
+  function generateText(type: string): string {
     switch (type) {
       case "motivational":
         return generateRandomQuote(motivation);
@@ -61,7 +70,7 @@ export default function SpeechBubble() {
       case "farewell":
         return generateRandomQuote(farewells);
       case "informative":
-        return "Did you know? TypeScript adds static types to JavaScript, helping to catch errors early.";
+        return generateRandomQuote(facts);
       default:
         return "Unknown text type.";
     }
@@ -72,10 +81,14 @@ export default function SpeechBubble() {
     return randomQuote;
   }
 
+  const text = generateText(category);
+
   return (
     <>
-      <div className='bubble-container'>
-        <div className='speech-bubble'>{text}</div>
+      <div className="bubble-container">
+        <div className="speech-bubble">
+          {text}
+        </div>
       </div>
     </>
   );
