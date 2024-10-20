@@ -5,10 +5,10 @@ Created October 18-19 2024
 - https://youtu.be/Q5eXctCOrQ8?si=GGJ-qoXMmnnApeUX
 
 ## Authors
-- Dallin Moak
-- Isaac Cole
-- Robert Goettman
-- Natalie Tesam
+- Dallin Moak https://github.com/dallinmoak
+- Isaac Cole https://github.com/Wizic7
+- Robert Goettman https://github.com/rag63
+- Natalie Tesam https://github.com/NatalieTesam
 
 ## Inspiration
 We were inspired by nostaligia for Tamagotchi e-pets, but Natalie asked a great question: What if we could feed our cute digital pet by doing homework?
