@@ -1,50 +1,41 @@
-# React + TypeScript + Vite
+# Our Study Buddy Hackathon BYUI-Hack 2024 Project
+Created October 18-19 2024
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Informational Video
+- https://youtu.be/Q5eXctCOrQ8?si=GGJ-qoXMmnnApeUX
 
-Currently, two official plugins are available:
+## Authors
+- Dallin Moak
+- Isaac Cole
+- Robert Goettman
+- Natalie Tesam
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Inspiration
+We were inspired by nostaligia for Tamagotchi e-pets, but Natalie asked a great question: What if we could feed our cute digital pet by doing homework?
 
-## Expanding the ESLint configuration
+## What it does
+We scrape data from the canvas webUI, analyze the results and feed the bear accordingly.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## How we built it
+We used React, Vite, and Typescript/JavaScript that interacts with the chrome browser extension API.
 
-- Configure the top-level `parserOptions` property like this:
+## Challenges we ran into
+We had issues with using Vite as a bundler before it was uploaded to the browser as a browser extension package, which added some complications when building. We also had trouble using certain methods in the chrome API like sending messages between scripts. Also, the canvas API's restrictions prevented us from fetching relevant data the proper way.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Accomplishments that we're proud of
+We are proud of the design of the buddy avatar itself. We were able to use a .svg file that uses fill colors to allow live, user defined, color scheming. We were able to work well in a team, especially when breaking down problems and trying to tackle them as efficiently as possible. We were able set up a system that can easily integrate the canvas data to then dynamically update the avatar. And finally, we created a functional browser extension that stays in the corner of the screen.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## What we learned
+We learned in depth about interacting with various APIs, especially common pitfalls and limitations of the canvas API. We learned how to work as a team in accomplishing a large task and persevere despite setbacks. We improved our skills at researching and overcoming problems.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## What's next for Study Buddy
+Integration with the official API, integration with schedules, cosmetic, chat bot integration for starting ideas, streak element, statistics for studying, more animations, and able to portion out study time to incentives more learning and growth.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Built With
+- React
+- Vite
+- css
+- javascript
+
+
+
